@@ -3,8 +3,8 @@
     <head>
         <meta chyarset="UTF-8">
         <title>Shoes store</title>
-        <!-- <link rel="stylesheet" href="style.css"> -->
-        <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet"> -->
         <link href="./favicon/favicon.ico" rel="icon" type="image/x-icon" />
     </head>
@@ -18,14 +18,11 @@
                 <div class="main-title">
                     <span><h1>Обери свій стиль</h1></span>
                 </div>
-                <div class="cart" onclick="Alert()">
-                    <img src="./Images/Cart.png" id="cart">
-                </div>
                 <!-- <div class="to-range">
                     <img src="./Images/ToRange.png" id="to-range">
                 </div> -->
                 <div class="to-range">
-                    <span>Это кликабельно</span> <!--для виделения кнопки-->
+                    <!-- <span>Это кликабельно</span> для виделения кнопки -->
                     <a href="#range"><img src="./Images/ToRange.png" id="to-range"></a>
                 </div>
             </div>
@@ -60,6 +57,46 @@
                             <li>Оплата оналйн та при отриманні</li>
                             <li>Консультація по телефону</li>
                             <li>Швидка доставка</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="questions">
+                <div class="question">
+                    <div class="box">
+                        <img src="./Images/box.png" width="150px" height="150px" alt="">
+                    </div>
+                    <h1>Як замовити?</h1>
+                    <div class="answer">
+                        <ul>
+                            <li>Залишити заявку через сайт</li>
+                            <li>Незабаром з вами зв'яжеться </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="box">
+                        <img src="./Images/box.png" width="150px" height="150px" alt="">
+                    </div>
+                    <h1>Як скоро прийде замовлення?</h1>
+                    <div  class="answer">
+                        <ul>
+                            <li>1 день по Полтаві</li>
+                            <li>3-4 дні по Україні</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="box">
+                        <img src="./Images/box.png" width="150px" height="150px" alt="">
+                    </div>
+                    <h1>Умови оплати?</h1>
+                    <div  class="answer">
+                        <ul>
+                            <li>Оплата онлайн</li>
+                            <li>Олата при отриманні</li>
                         </ul>
                     </div>
                 </div>
@@ -189,14 +226,37 @@
                 </div>
             </div>
 
-            <form>
+            <!-- <form>
                 <label for="phone-number">Ваш телефон</label>
                 <input type="tel" placeholder="+380957657698" id="phone-number">
                 <input type="button" value="Передзвонити"></br>
                 <label for="checkbox-for-sms">Відправити СМС</label>
                 <input type="checkbox" id="checkbox-for-sms">
-            </form>
+            </form> -->
         </main>
+
+        <div class="modal-overlay">
+            <div class="modal-window">
+                <div class="modal-header">
+                    <span class="modal-title">Замовити модель</span>
+                    <span class="modal-close">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <label for="name">Ім'я</label>
+                        <input type="text" id="name"></br>
+                        <label for="phone-number">Ваш телефон</label>
+                        <input type="tel" placeholder="+380957657698" id="phone-number"></br>
+                        <label for="checkbox-for-sms">Відправити СМС</label>
+                        <input type="checkbox" id="checkbox-for-sms">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button>Замовити</button>
+                    <p>Натискаючи цю кнопку, ви даєте дозвіл на обробку персональних даних </p>
+                </div>
+            </div>
+        </div>
 
         <footer>
             <div class="footer" id="footer">
