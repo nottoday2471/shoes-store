@@ -312,7 +312,28 @@ ul{
     align-items: center;
 }
 
-
+#to-top{
+    height: 32px;
+    width: 32px;
+    transform: rotate(180deg);
+}
+.to-top{
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 650px;
+    left: 97%;
+    z-index: 9999;
+    display: none;
+}
+.to-top._show{
+    display: block;
+}
+#to-top:hover{
+    height: 36px;
+    width: 36px;
+    cursor: pointer;
+}
 
 /* #link-to-katalog:hover{
     cursor: pointer;

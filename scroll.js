@@ -10,3 +10,31 @@ for(let anchor of anchors){
         })
     })
 }
+
+function trackScroll(){
+    let scrolled = window.pageYOffset
+    let coords = document.documentElement.clientHeight
+    if(scrolled > coords){
+        toTopButton.classList.add('_show')
+    }
+    if(scrolled < coords){
+        toTopButton.classList.remove('_show')
+    }
+}
+
+
+
+const toTopButton = document.querySelector('.to-top')
+
+window.addEventListener('scroll', () => {
+    let scrolled = window.pageYOffset
+    if(scrolled > 600){
+        toTopButton.classList.add('_show')
+    }
+    else{
+        toTopButton.classList.remove('_show')
+    }
+})
+
+
+
