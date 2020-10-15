@@ -1,18 +1,12 @@
-// const linkToKatalog = document.getElementById('link-to-katalog');
-// const katalog = document.getElementById('katalog');
-// const linkToFooter = document.getElementById('link-to-footer');
-// const footer = document.getElementById('footer');
+const anchors = document.querySelectorAll('a[href*="#"]')
 
-const link = document.getElementById('to-range');
-const range = document.getElementById('range');
-
-function scroll(el){
-    el.scrollIntoView({
-        behavior: 'smooth'
-    });
+for(let anchor of anchors){
+    anchor.addEventListener('click', (event) => {
+        event.preventDefault()
+        const blockId = anchor.getAttribute('href')
+        document.querySelector(blockId).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+    })
 }
-
-link.addEventListener('click', () => scroll(range));
-
-// linkToKatalog.addEventListener('click', () => scroll(katalog));
-// linkToFooter.addEventListener('click', () => scroll(footer));
