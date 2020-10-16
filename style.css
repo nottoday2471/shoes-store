@@ -14,12 +14,11 @@ body{
     margin: 0;
     padding: 0;
     position: relative;
+    border-top: 10px solid black;
 }
 .logo{
     margin: 0;
     padding: 0;
-    position: absolute;
-    top: 5px;
 }
 #logo{
     height: 98px;
@@ -27,7 +26,7 @@ body{
 }
 .main-title{
     font-family: 'Montserrat', sans-serif;
-    font-size: 48px;
+    font-size: 20px;
     margin: 0;
     padding: 0;
     display: inline-block;
@@ -44,7 +43,7 @@ body{
     margin: 0;
     padding: 0;
     position: absolute;
-    top: 35px;
+    top: 25px;
     left: 97%;
 }
 #to-range:hover{
@@ -116,6 +115,7 @@ ul{
     margin: 0;
     padding: 0;
     margin-top: 30px;
+    border-top: 10px solid black;
 }
 .range-title{
     display: flex;
@@ -227,6 +227,7 @@ ul{
     padding: 0;
     margin-top: 30px;
     position: relative;
+    border-top: 10px solid black;
 }
 .links{
     margin: 0;
