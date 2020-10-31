@@ -3,11 +3,6 @@
     padding: 0; 
     outline: none;
 }
-body{
-    background-color: rgb(225, 225, 225);
-    overflow-x: hidden;
-    font-family: 'Montserrat', sans-serif;
-}
 .header{
     background-color: rgb(255, 255, 255);
     height: 90px;
@@ -233,7 +228,15 @@ ul{
 .reviews table th, td{
     border: 2px solid silver;
 }
+.text-area{
+    padding: 0;
+}
+.text{
+    max-height: 100px;
+    overflow-y: auto;
+}
 .reviews table td{
+    height: 130px;
     padding: 10px;
     text-align: center;
 }
@@ -365,7 +368,7 @@ ul{
     cursor: pointer;
 }
 ::-webkit-scrollbar { width: 7px; height: 7px;}
-::-webkit-scrollbar-button {  background-color: rgb(0, 0, 0); }
+::-webkit-scrollbar-button { height: 10px; background-color: rgb(0, 0, 0); }
 ::-webkit-scrollbar-track-piece { background-color: rgb(255, 255, 255);}
 ::-webkit-scrollbar-thumb { height: 50px; background-color:rgb(0, 0, 0); border-radius: 0px;}
 ::-webkit-scrollbar-corner { background-color: rgb(0, 0, 0);}
