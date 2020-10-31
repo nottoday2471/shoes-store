@@ -1,0 +1,123 @@
+*{
+    outline: none;
+}
+.modal-overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background .2s ease-in;
+}
+.modal-window{
+    background: rgb(255, 255, 255);
+    width: 320px;
+    margin: 0 auto;
+    transform: translateY(-200px);
+    transition: transform .2s ease-in;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+.modal-header{
+    padding: 0 0 5px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    align-items: center;
+}
+.modal-footer{
+    margin-top: 5px;
+    border-top: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.buy-it{
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    width: 70px;
+    height: 35px;
+    font-size: 14px;
+    border: none;
+    background: rgb(194, 194, 194);
+    cursor: pointer;
+    border-radius: 5px;
+}
+.buy-it:hover{
+    border: 1px solid black;
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(194,194,194,1) 100%);
+}
+.modal-footer p{
+    font-size: 12px;
+}
+
+#name{
+    margin-left: 35px;
+}
+#phone-number{
+    margin-left: 0
+}
+#checkbox-for-sms{
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.input{
+    margin-top: 20px;
+    padding: 3px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 14px;
+}
+.alert{
+    text-align: center;
+}
+.modal-title{
+    font-weight: 800;
+    margin-left: 70px;
+}
+.modal-close{
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    transform: rotate(0);
+    transition: .5s ease;
+}
+
+
+
+
+
+.modal._open .modal-overlay,
+.modal._open .modal-window{
+    opacity: 1;
+    z-index: 1000;
+}
+.modal._hide .modal-overlay,
+.modal._hide .modal-window{
+    opacity: 1;
+    z-index: 1000;
+}
+.modal._open .modal-window{
+    transform: translateY(100px);
+}
+.modal._hide .modal-overlay{
+    background: rgba(0, 0, 0, 0);
+}
+.modal._hide .modal-window{
+    transform: translateY(-200px);
+}
+.modal._open .modal-overlay{
+    background: rgba(0, 0, 0, .5);
+}
+.modal-window, .modal-overlay{
+    opacity: 0;
+    z-index: -1;
+}
+.modal-close:hover{
+    transform: rotate(90deg);
+    transition: .8s ease;
+}
