@@ -1,0 +1,337 @@
+@import 'variables1';
+*{
+    margin: 0;
+    padding: 0; 
+    outline: none;
+}
+header{
+    .header{
+        background-color: color(main-color);
+        height: 90px;
+        width: $max-witdh;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        border-top: $border;
+        .logo{
+            margin: 0;
+            padding: 0;
+            img{
+                height: 98px;
+                width: 160px;
+            }
+        }
+        .main-title{
+            font-size: 20px;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            transform: translateX(-50%);
+        }
+        nav{
+            .to-range{
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                top: 25px;
+                left: 97%;
+                a{
+                    img{
+                        @include nav-button(32px, 32px, 36px, 36px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+nav{
+    .to-top{
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        top: 650px;
+        left: 97%;
+        z-index: 9999;
+        display: none;
+        &._show{
+            display: block;
+        }
+        a{
+            img{
+                transform: rotate(180deg);
+                @include nav-button(32px, 32px, 36px, 36px);
+            }
+        }
+    }
+}
+
+main{
+    .main-image{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        img{
+            height: 463px;
+            width: 1032;
+            border-radius: 34px;
+        }
+    }
+    .block{
+        margin-top: 40px;
+        margin-left: 30px;
+        .all-pluses{
+            margin: 0;
+            padding: 0;
+            width: 1500px;
+            @include position_of_items;
+            .plus{
+                font-weight: 800;
+                font-size: 24px;
+                ul{
+                    list-style: none;
+                    li{
+                        &::before{
+                            content: "✚";
+                            padding-right: 7px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .questions{
+        margin: 0;
+        padding: 0;
+        margin-top: 100px;
+        @include position_of_items;
+        align-items: center;
+        .question{
+            .box{
+                display: flex;
+                justify-content: center;
+            }
+            .answer{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 10px 0 0;
+                ul{
+                    list-style: none;
+                    li{
+                        padding: 5px 0 0;
+                        &:before{
+                            content: "▶";
+                            padding-right: 7px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .reviews{
+        margin-top: 30px;
+        padding: 0 10px;
+        table{
+            border-collapse: collapse;
+            border: 2px solid silver;
+            font-size: 14px;
+            font-weight: 400;
+            tr{
+                th{
+                    border: 2px solid silver;
+                }
+            }
+            tr{
+                td{
+                    border: 2px solid silver;
+                    height: 130px;
+                    padding: 10px;
+                    text-align: center;
+                    &:first-child{
+                        font-size: 12px;
+                    }
+                }
+                img{
+                    width: 70px;
+                    height: 70px;
+                }
+                .text-area{
+                    padding: 0 10px;
+                    .text{
+                        max-height: 100px;
+                        overflow-y: auto;
+                    }
+                }
+            }
+            
+        }
+    }
+    .range-block{
+        background-color: color(main-color);
+        height: 60px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        margin-top: 30px;
+        border-top: $border;
+        .range-title{
+            display: flex;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 36px;
+            margin-top: 5px;
+            padding: 0;
+        }
+    }
+    %for-range-lines{
+        margin: 0;
+        padding: 0;
+        @include position_of_items;
+        .shoes{
+            margin: 0;
+            padding: 0;
+            width: 283px;
+            height: 372px;
+            background-color:  color(item-color);
+            border-radius: 20px;
+            .title-of-shoes{
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                font-weight: 800;
+                font-size: 18px;
+                span{
+                    margin-top: 10px;
+                }
+            }
+            .shoes-image{
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                margin-top: 30px;
+                img{
+                    border-radius: 15px;
+                    transition: .5s all;
+                    @include scale-image(color(shadow-color), 1.2);
+                }
+            }
+            .info{
+                font-weight: 800;
+                font-size: 18px;
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+                ul{
+                    list-style-type: none;
+                    #info{
+                        list-style-type: none;
+                    }
+                    #price{
+                        margin-top: 15px;
+                    }
+                    #sex{
+                        margin-top: 15px;
+                    }
+                }
+            }
+            .button-block{
+                display: flex;
+                justify-content: center;
+                margin-top: 10px;
+                .button{
+                    font-weight: 800;
+                    font-size: 18px;
+                    width: 236px;
+                    height: 32px;
+                    border: none;
+                    border-radius: 20px;
+                    @include button-for-buy;
+                }
+            }
+        }
+    }
+    .range-first-line{
+        margin-top: 30px;
+        @extend %for-range-lines;
+    }
+    .range-second-line{
+        margin-top: 50px;
+        @extend %for-range-lines;
+    }
+}
+
+footer{
+    .footer{
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        margin-top: 30px;
+        border-top: $border;
+        .sub{
+            max-width: 1200px;
+            position: relative;
+            margin: 10px auto 0;
+            .links{
+                margin: 0;
+                padding: 0;
+                font-weight: 800;
+                font-size: 20px;
+                margin-left: 30px;
+                a{
+                    text-decoration: none;
+                    color: rgb(0, 0, 0);
+                    transition:  .2s linear;
+                    @include animation-for-links(color(link-color));
+                }
+                #inst{
+                    margin-left: 20px;
+                }
+                #fb{
+                    margin-left: 20px;
+                }
+                #mail{
+                    margin-left: 20px;
+                }
+            }
+            .copyright{
+                margin: 0;
+                padding: 0;
+                font-weight: 800;
+                font-size: 14px;
+                display: flex;
+                justify-content: center;
+            }
+            .phone-numbers{
+                margin: 0;
+                padding: 0;
+                position: relative;
+                span{
+                    position: absolute;
+                    right: 50px;
+                    top: -40px;
+                    pre{
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 800;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+::-webkit-scrollbar { width: 7px; height: 7px;}
+::-webkit-scrollbar-button { height: 10px; background-color: rgb(0, 0, 0); }
+::-webkit-scrollbar-track-piece { background-color: color(main-color);}
+::-webkit-scrollbar-thumb { height: 50px; background-color:rgb(0, 0, 0); border-radius: 0px;}
+::-webkit-scrollbar-corner { background-color: rgb(0, 0, 0);}
+::-webkit-resizer { background-color:rgb(0, 0, 0);}

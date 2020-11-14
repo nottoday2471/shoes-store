@@ -1,0 +1,478 @@
+@charset "UTF-8";
+/*default display: flex; + justify-contentL space-around;*/
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+header .header {
+  background-color: white;
+  height: 90px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  border-top: 10px solid black;
+}
+
+header .header .logo {
+  margin: 0;
+  padding: 0;
+}
+
+header .header .logo img {
+  height: 98px;
+  width: 160px;
+}
+
+header .header .main-title {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+header .header nav .to-range {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 25px;
+  left: 97%;
+}
+
+header .header nav .to-range a img {
+  height: 32px;
+  width: 32px;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+header .header nav .to-range a img:hover {
+  height: 36px;
+  width: 36px;
+  cursor: pointer;
+}
+
+nav .to-top {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 650px;
+  left: 97%;
+  z-index: 9999;
+  display: none;
+}
+
+nav .to-top._show {
+  display: block;
+}
+
+nav .to-top a img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  height: 32px;
+  width: 32px;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+nav .to-top a img:hover {
+  height: 36px;
+  width: 36px;
+  cursor: pointer;
+}
+
+main .main-image {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+main .main-image img {
+  height: 463px;
+  width: 1032;
+  border-radius: 34px;
+}
+
+main .block {
+  margin-top: 40px;
+  margin-left: 30px;
+}
+
+main .block .all-pluses {
+  margin: 0;
+  padding: 0;
+  width: 1500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .block .all-pluses .plus {
+  font-weight: 800;
+  font-size: 24px;
+}
+
+main .block .all-pluses .plus ul {
+  list-style: none;
+}
+
+main .block .all-pluses .plus ul li::before {
+  content: "✚";
+  padding-right: 7px;
+}
+
+main .questions {
+  margin: 0;
+  padding: 0;
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .questions .question .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .questions .question .answer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0 0;
+}
+
+main .questions .question .answer ul {
+  list-style: none;
+}
+
+main .questions .question .answer ul li {
+  padding: 5px 0 0;
+}
+
+main .questions .question .answer ul li:before {
+  content: "▶";
+  padding-right: 7px;
+}
+
+main .reviews {
+  margin-top: 30px;
+  padding: 0 10px;
+}
+
+main .reviews table {
+  border-collapse: collapse;
+  border: 2px solid silver;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+main .reviews table tr th {
+  border: 2px solid silver;
+}
+
+main .reviews table tr td {
+  border: 2px solid silver;
+  height: 130px;
+  padding: 10px;
+  text-align: center;
+}
+
+main .reviews table tr td:first-child {
+  font-size: 12px;
+}
+
+main .reviews table tr img {
+  width: 70px;
+  height: 70px;
+}
+
+main .reviews table tr .text-area {
+  padding: 0 10px;
+}
+
+main .reviews table tr .text-area .text {
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+main .range-block {
+  background-color: white;
+  height: 60px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-top: 30px;
+  border-top: 10px solid black;
+}
+
+main .range-block .range-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 800;
+  font-size: 36px;
+  margin-top: 5px;
+  padding: 0;
+}
+
+main .range-first-line, main .range-second-line {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .range-first-line .shoes, main .range-second-line .shoes {
+  margin: 0;
+  padding: 0;
+  width: 283px;
+  height: 372px;
+  background-color: #c4c4c4;
+  border-radius: 20px;
+}
+
+main .range-first-line .shoes .title-of-shoes, main .range-second-line .shoes .title-of-shoes {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+main .range-first-line .shoes .title-of-shoes span, main .range-second-line .shoes .title-of-shoes span {
+  margin-top: 10px;
+}
+
+main .range-first-line .shoes .shoes-image, main .range-second-line .shoes .shoes-image {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30px;
+}
+
+main .range-first-line .shoes .shoes-image img, main .range-second-line .shoes .shoes-image img {
+  border-radius: 15px;
+  -webkit-transition: .5s all;
+  transition: .5s all;
+}
+
+main .range-first-line .shoes .shoes-image img:hover, main .range-second-line .shoes .shoes-image img:hover {
+  -webkit-box-shadow: 10px 5px #494949;
+          box-shadow: 10px 5px #494949;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+main .range-first-line .shoes .info, main .range-second-line .shoes .info {
+  font-weight: 800;
+  font-size: 18px;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .range-first-line .shoes .info ul, main .range-second-line .shoes .info ul {
+  list-style-type: none;
+}
+
+main .range-first-line .shoes .info ul #info, main .range-second-line .shoes .info ul #info {
+  list-style-type: none;
+}
+
+main .range-first-line .shoes .info ul #price, main .range-second-line .shoes .info ul #price {
+  margin-top: 15px;
+}
+
+main .range-first-line .shoes .info ul #sex, main .range-second-line .shoes .info ul #sex {
+  margin-top: 15px;
+}
+
+main .range-first-line .shoes .button-block, main .range-second-line .shoes .button-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px;
+}
+
+main .range-first-line .shoes .button-block .button, main .range-second-line .shoes .button-block .button {
+  font-weight: 800;
+  font-size: 18px;
+  width: 236px;
+  height: 32px;
+  border: none;
+  border-radius: 20px;
+}
+
+main .range-first-line .shoes .button-block .button:hover, main .range-second-line .shoes .button-block .button:hover {
+  border: 3px solid black;
+  cursor: pointer;
+}
+
+main .range-first-line {
+  margin-top: 30px;
+}
+
+main .range-second-line {
+  margin-top: 50px;
+}
+
+footer .footer {
+  background-color: white;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-top: 30px;
+  border-top: 10px solid black;
+}
+
+footer .footer .sub {
+  max-width: 1200px;
+  position: relative;
+  margin: 10px auto 0;
+}
+
+footer .footer .sub .links {
+  margin: 0;
+  padding: 0;
+  font-weight: 800;
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+footer .footer .sub .links a {
+  text-decoration: none;
+  color: black;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+footer .footer .sub .links a:hover {
+  color: #c4c4c4;
+}
+
+footer .footer .sub .links #inst {
+  margin-left: 20px;
+}
+
+footer .footer .sub .links #fb {
+  margin-left: 20px;
+}
+
+footer .footer .sub .links #mail {
+  margin-left: 20px;
+}
+
+footer .footer .sub .copyright {
+  margin: 0;
+  padding: 0;
+  font-weight: 800;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .footer .sub .phone-numbers {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+footer .footer .sub .phone-numbers span {
+  position: absolute;
+  right: 50px;
+  top: -40px;
+}
+
+footer .footer .sub .phone-numbers span pre {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-button {
+  height: 10px;
+  background-color: black;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 50px;
+  background-color: black;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: black;
+}
+
+::-webkit-resizer {
+  background-color: black;
+}
+/*# sourceMappingURL=main.css.map */

@@ -121,8 +121,7 @@ ul{
     margin-top: 5px;
     padding: 0;
 }
-
-.range-fisrt-line{
+.range-first-line{
     margin: 0;
     padding: 0;
     display: flex;
@@ -130,13 +129,6 @@ ul{
     margin-top: 30px;
 }
 .range-second-line{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 50px;
-}
-.range-third-line{
     margin: 0;
     padding: 0;
     display: flex;

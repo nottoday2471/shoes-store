@@ -1,0 +1,54 @@
+$colors:(
+    main-color: rgb(255, 255, 255),
+    shadow-color: rgb(73, 73, 73),
+    link-color: rgb(196, 196, 196),
+    item-color: rgb(196, 196, 196)
+);
+$max-witdh: 100%;
+$border: 10px solid black;
+
+@function color($key){
+    @if(map-has-key($map: $colors, $key: $key)){
+        @return map-get($map: $colors, $key: $key);
+    }
+
+    @warn "Unknown `#{$key}` in colors";
+    @return null;
+}
+
+/*default display: flex; + justify-contentL space-around;*/
+@mixin position_of_items{
+    display: flex;
+    justify-content: space-around;
+}
+
+@mixin nav-button($witdh-before, $height-before, $witdh-after, $height-after){
+    height: $height-before;
+    width: $witdh-before;
+    transition: .2s ease;
+    &:hover{
+        height: $height-after;
+        width: $witdh-after;
+        cursor: pointer;
+    }
+}
+
+@mixin button-for-buy{
+    &:hover{
+        border: 3px solid black;
+        cursor: pointer;
+    }
+}
+
+@mixin animation-for-links($color){
+    &:hover{
+        color: $color;
+    }
+}
+
+@mixin scale-image($color, $param-for-scale){
+    &:hover{
+        box-shadow: 10px 5px $color;
+        transform: scale($param-for-scale);
+    }
+}
